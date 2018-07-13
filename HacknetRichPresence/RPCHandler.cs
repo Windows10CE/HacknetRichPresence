@@ -13,8 +13,6 @@ namespace HacknetRichPresence {
         private static DiscordRpc.RichPresence _presence = new DiscordRpc.RichPresence();
         private static DiscordRpc.EventHandlers _handlers;
 
-        private static bool _addedExtensions = false;
-
         private static bool _auto = true;
         private static string _controller = null;
 
@@ -31,7 +29,6 @@ namespace HacknetRichPresence {
                 _enabled = true;
                 _handlers = new DiscordRpc.EventHandlers();
                 DiscordRpc.Initialize(clientId, ref _handlers, true, null);
-
             } else
                 Console.WriteLine(@"Mods/discord-rpc.dll does not exist! Please download it from https://drive.google.com/open?id=1rJvhzQojvlLmM0Hngr5KaQZvuuEMqGTa !");
         }
